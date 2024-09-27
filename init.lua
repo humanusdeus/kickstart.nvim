@@ -293,7 +293,6 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         gopls = {},
-        pyright = {},
         tailwindcss = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -312,9 +311,6 @@ require('lazy').setup({
           },
         },
       }
-
-      local copilot_cmp = require("copilot_cmp")
-      copilot_cmp._on_insert_enter({})
 
       require('mason').setup()
 
@@ -422,7 +418,6 @@ require('lazy').setup({
           --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
         },
         sources = {
-          { name = "copilot", group_index = 2 },
           {
             name = 'lazydev',
             -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
